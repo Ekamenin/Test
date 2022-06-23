@@ -1,3 +1,4 @@
+TEST APACHE
 - hosts: all
   become: true
   tasks:
