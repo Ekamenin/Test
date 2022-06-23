@@ -1,0 +1,9 @@
+- hosts: Node1
+  become: true
+  tasks:
+     - name: Partition drive
+       community.general.parted:
+        device: /dev/nvme0n2 
+        number: 1
+        state: present
+        part_end: 2GiB
